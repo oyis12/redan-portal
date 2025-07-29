@@ -61,9 +61,9 @@ const items = [
     "/users",
     <img src={user_outline_2} alt="" className="w-1" />
   ),
-  getItem("Cutlist", "/cutlist", <img src={policy_2} alt="" className="w-1" />),
+  getItem("Properties", "/cutlist", <img src={policy_2} alt="" className="w-1" />),
   getItem(
-    "Credit Packages",
+    "Levy payment",
     "/credit-packages",
     <img src={coin_dark} alt="" className="w-4" />
   ),
@@ -72,7 +72,7 @@ const items = [
     "/notification",
     <img src={bell_dark} alt="" className="w-1" />
   ),
-  getItem("Payments", "/payment", <img src={wallet} alt="" className="w-5" />),
+  getItem("Feedback", "/payment", <img src={wallet} alt="" className="w-5" />),
   getItem(
     "Blogs",
     "/feedback",
@@ -102,16 +102,13 @@ const DashboardLayout = () => {
       title = "Cutlist";
       break;
     case "/credit-packages":
-      title = "Credit Packages";
+      title = "Levy Payments";
       break;
     case "/notification":
       title = "Notification";
       break;
-    case "/payment":
-      title = "Payments";
-      break;
     case "/feedback":
-      title = "Feedbacks";
+      title = "blogs";
       break;
     default:
       title = "";
