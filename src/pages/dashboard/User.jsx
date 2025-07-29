@@ -1081,7 +1081,7 @@ const User = () => {
             allowClear
           />
           <Button
-            className="rounded px-4 h-8 font-semibold bg-[#F1B31C] hover:!bg-[#F1B31C] hover:!text-black border-none flex items-center"
+            className="rounded px-4 h-8 font-semibold bg-[#DD3333] hover:!bg-red-400 hover:!text-white border-none flex items-center"
             onClick={() => setIsModalOpen(true)}
           >
             <img src={plus} alt="Add" className="mr-2 w-3" />
@@ -1171,7 +1171,7 @@ const User = () => {
               type="primary"
               htmlType="submit"
               block
-              className="bg-[#F1B31C] text-black hover:!bg-yellow-400"
+              className="bg-[#DD3333] text-black hover:!bg-red-400"
             >
               Add User
             </Button>
