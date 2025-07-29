@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Custom styles for the Menu */
+.custom-menu .ant-menu-item:hover {
+  background-color: #F2C94C !important;
+  color: black !important; /* Ensure text color is readable */
+  transition: .8s ease-in-out
+}
+
+.custom-menu .ant-menu-item-selected {
+  background-color: #F2C94C !important;
+  color: black !important; /* Ensure text color is consistent */
+  transition: .8s ease-in-out
+}
+
+/* Ensure text color stays black for all items */
+.custom-menu .ant-menu-item a {
+  color: black !important;
+  transition: .8s ease-in-out
+}
+
+.custom-table .ant-table-thead > tr > th {
+  border-bottom: none;
+}
+
+.custom-table .ant-table-thead > tr > th:first-child,
+.custom-table .ant-table-thead > tr > th:last-child {
+  border-bottom: 1px solid #f0f0f0; /* Apply border only to the first and last column headers */
+}
+
+.custom-modal {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  /* height: 100vh !important; Full height */
+  border-radius: 0 !important; /* Remove rounded corners */
+  width: 400px; /* Adjust the width as needed */
+}
+
+.custom-modal .ant-modal-header,
+.custom-modal .ant-modal-body,
+.custom-modal .ant-modal-footer {
+  border-radius: 0 !important;
+}
+
+.custom-modal .ant-modal-content {
+  height: 100% !important; /* Ensures content takes full height */
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-modal .ant-modal-body {
+  flex-grow: 1; /* Takes up available space */
+  overflow-y: auto; /* Allows scrolling if content overflows */
+}
+.custom-modal .ant-modal-content{
+  height: 100vh !important;
+}
+.ant-table-wrapper .ant-table-pagination {
+  border-radius: 50% !important; 
+}
+
+.custom-table .ant-table-tbody > tr > td {
+  padding: 8px; /* Adjust the padding to reduce row height */
+}
+
+.custom-table .ant-table-tbody > tr {
+  height: 50px; /* Set a fixed height for the rows */
+}
+
+.custom-pagination {
+  border-radius: 20px; /* Makes it round */
+  padding: 10px; /* Adds some padding */
+}
+
+.custom-pagination .ant-pagination-item {
+  border-radius: 50%; /* Round pagination items */
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-pagination .ant-pagination-item-active {
+  background-color: #FFC107; /* Active item color */
+  color: black; /* Active text color */
+}
+.ant-pagination-item-active a {
+  color: #FFFFFF !important;
+  font-weight: bold;
+}
+.ant-input-group-addon{
+  border: none !important;
+  padding: 0 !important;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.logo {
+  width: 44px; /* Set the logo size */
+  animation: fadeIn 1s ease forwards; /* Fade-in animation */
+}
+
+.cutlist {
+  animation: slideIn 1s ease forwards; /* Slide-in animation for text */
+}
+
