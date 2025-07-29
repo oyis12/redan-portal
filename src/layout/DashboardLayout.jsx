@@ -57,7 +57,7 @@ const items = [
     <img src={dashboard} alt="" className="w-1" />
   ),
   getItem(
-    "Users",
+    "Members",
     "/users",
     <img src={user_outline_2} alt="" className="w-1" />
   ),
@@ -74,7 +74,7 @@ const items = [
   ),
   getItem("Payments", "/payment", <img src={wallet} alt="" className="w-5" />),
   getItem(
-    "Feedback",
+    "Blogs",
     "/feedback",
     <img src={feedback} alt="" className="w-4" />
   ),
@@ -93,7 +93,7 @@ const DashboardLayout = () => {
       title = "Dashboard";
       break;
     case "/users":
-      title = "Users";
+      title = "Members";
       break;
     case location.pathname.startsWith("/user/") && "/user/":
       title = "User Profile";
@@ -153,8 +153,8 @@ const DashboardLayout = () => {
         }}
       >
         <div className="p-4 text-xl font-bold flex items-center">
-          <img src={logo} alt="" className="w-6 mx-2" />
-          {!collapsed && <h2 className="text-[1rem]">Cutlist</h2>}
+          <img src={logo} alt="" className="w-20 mx-2" />
+          {!collapsed && <h2 className="text-[1rem]">REDAN</h2>}
         </div>
         <Menu
           theme="light"

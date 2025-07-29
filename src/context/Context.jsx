@@ -22,7 +22,7 @@ export const ContextProvider = ({ children }) => {
     if (savedUser && savedToken) {
       try {
         const user = JSON.parse(savedUser);
-        if (user && user.phoneNumber) {
+        if (user && user.email) {
           if (isMounted) {
             setLoggedInUser(user);
             setAccessToken(savedToken);

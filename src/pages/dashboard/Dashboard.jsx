@@ -386,46 +386,8 @@ const Dashboard = () => {
               ))}
             </div>
 
-              {/* RECENT PAYMENT SECTION */}
-            {/* <div className="bg-white rounded p-3 mt-8">
-              <div className="flex justify-between items-center">
-                <p className="font-semibold">Recent Payments</p>
-                <Button className="bg-[#F2C94C] hover:!bg-[#F2C94C] p-2 rounded-full h-6 flex justify-center items-center text-[.7rem] border-none hover:!text-black">
-                  View more
-                </Button>
-              </div>
 
-              <div className="overflow-x-auto mt-7">
-                {loading ? (
-                  <div className="flex justify-center items-center h-64">
-                    <ThreeDots
-                      visible={true}
-                      height="80"
-                      width="80"
-                      color="#F1B31C"
-                      radius="9"
-                      ariaLabel="three-dots-loading"
-                      wrapperClass="three-dots-loading"
-                    />
-                  </div>
-                ) : (
-                  <Table
-                    columns={columns}
-                    dataSource={sourcedData}
-                    size="small"
-                    pagination={{
-                      pageSize: 5,
-                      position: ["bottomCenter"],
-                      className: "custom-pagination",
-                    }}
-                    className="custom-table"
-                    scroll={{ x: "max-content" }}
-                  />
-                )}
-              </div>
-            </div> */}
-
-  <div className="bg-white rounded p-3 mt-8">
+ <div className="bg-white rounded p-3 mt-8">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
     {/* Recent Approved Members */}
     <div>
@@ -485,89 +447,104 @@ const Dashboard = () => {
       </div>
     </div>
 
-    {/* Recent Levied Payments */}
+    {/* Recently Levied Payments */}
     <div>
       <div className="flex justify-between items-center">
         <p className="font-semibold">Recently Levied Payments</p>
-        <Button className="bg-[#F2C94C] hover:!bg-[#F2C94C] p-2 rounded-full h-6 flex justify-center items-center text-[.7rem] border-none hover:!text-black">
+        <Button className="bg-[#DD3333] hover:!bg-[#F2C94C] p-2 rounded-full h-6 flex text-white justify-center items-center text-[.7rem] border-none hover:!text-black">
           View more
         </Button>
       </div>
 
       <div className="overflow-x-auto mt-5">
-        {loading ? (
-          <div className="flex justify-center items-center h-52">
-            <ThreeDots
-              visible={true}
-              height="80"
-              width="80"
-              color="#F1B31C"
-              radius="9"
-              ariaLabel="three-dots-loading"
-            />
-          </div>
-        ) : (
-          <Table
-            columns={[
-              { title: "SN", render: (_, __, index) => index + 1, width: 60 },
-              { title: "Member", dataIndex: "customer_name", key: "customer_name" },
-              { title: "Amount", dataIndex: "amount", key: "amount" },
-              { title: "Date", dataIndex: "date", key: "date" },
-              {
-                title: "Status",
-                dataIndex: "status",
-                key: "status",
-                render: (text) => {
-                  let color = "", bg = "";
-                  switch (text) {
-                    case "pending":
-                      color = "#127CDD"; bg = "#D0E8FF"; break;
-                    case "successful":
-                      color = "#1F7700"; bg = "#5EDA79"; break;
-                    case "canceled":
-                      color = "#FF3D00"; bg = "#FFCCCC"; break;
-                    default:
-                      break;
-                  }
-                  return (
-                    <span
-                      style={{
-                        color,
-                        backgroundColor: bg,
-                        padding: "2px 8px",
-                        borderRadius: "10px",
-                        fontSize: ".75rem",
-                      }}
-                    >
-                      {text}
-                    </span>
-                  );
-                },
-              },
-            ]}
-            dataSource={sourcedData}
-            size="small"
-            pagination={{
-              pageSize: 3,
-              position: ["bottomCenter"],
-              className: "custom-pagination",
-            }}
-            className="custom-table"
-            scroll={{ x: "max-content" }}
-          />
-        )}
+        <Table
+          columns={[
+            { title: "SN", render: (_, __, index) => index + 1, width: 60 },
+            { title: "Member", dataIndex: "customer_name", key: "customer_name" },
+            { title: "Amount", dataIndex: "amount", key: "amount" },
+            { title: "Date", dataIndex: "date", key: "date" },
+            {
+              title: "Payment For",
+              dataIndex: "status",
+              key: "status",
+              render: (text) => (
+                <span
+                  className="bg-[#E0F7FA] text-[#00796B] text-xs px-3 py-[2px] rounded-full"
+                >
+                  {text}
+                </span>
+              ),
+            },
+          ]}
+          dataSource={[
+            {
+              key: "1",
+              customer_name: "Chidera Umeh",
+              amount: "₦5,000",
+              date: "28 Jul 2025",
+              status: "Levy",
+            },
+            {
+              key: "2",
+              customer_name: "Bolaji Adeniran",
+              amount: "₦7,500",
+              date: "27 Jul 2025",
+              status: "Levy",
+            },
+            {
+              key: "3",
+              customer_name: "Grace Nwachukwu",
+              amount: "₦6,000",
+              date: "26 Jul 2025",
+              status: "Levy",
+            },
+          ]}
+          size="small"
+          pagination={{
+            pageSize: 3,
+            position: ["bottomCenter"],
+            className: "custom-pagination",
+          }}
+          className="custom-table"
+          scroll={{ x: "max-content" }}
+        />
       </div>
     </div>
   </div>
 </div>
 
-
             {/* END */}
-          </div>
-
+ </div>
+   {/* RECENT PAYMENT SECTION */}
           <div className="lg:col-span-1">
             <div className="grid grid-rows-3 gap-4">
-              <div className="bg-white rounded p-4 text-center">Item 1</div>
+              {/* Approved Members section */}
+              <div className="bg-white rounded p-4">
+                <h1 className="font-bold text-lg">Approved Members</h1>
+                 <div className="mt-4">
+                  {recent.map((e) => (
+                    <div
+                      className="grid grid-cols-1 mt-2 bg-[#F5F5F5] p-2 rounded-md"
+                      key={e.id}
+                    >
+                      <div className="flex gap-2">
+                        <div className="rounded-full h-9 w-9 overflow-hidden">
+                          <img
+                            src={e.img}
+                            alt=""
+                            className="w-full object-cover"
+                          />
+                        </div>
+                        <div>
+                          <h1 className="font-semibold">{e.name}</h1>
+                          <p className="text-[.8rem]">{e.dec}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <div className="bg-white rounded p-3">
                 <div className="flex justify-between items-center">
                   <h1 className="font-bold text-lg">Recent Activity</h1>
@@ -599,9 +576,12 @@ const Dashboard = () => {
                     </div>
                   ))}
                 </div>
+
               </div>
             </div>
           </div>
+
+          {/* RECENT PAYMENT SECTION END */}
         </div>
       </div>
     </div>

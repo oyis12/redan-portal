@@ -8,15 +8,15 @@ const Navbar = () => {
   return (
     <div className="h-screen bg-white text-black flex flex-col rounded-tr-xl rounded-br-xl">
       <div className="p-4 text-xl font-bold flex items-center">
-        <img src={logo} alt="" className='w-6 mx-2'/>
-        <h2 className='text-[1rem]'>Cutlist</h2>
+        <img src={logo} alt="" className='w-8 mx-2'/>
+        <h2 className='text-[rem]'>REDAN</h2>
       </div>
       <nav className="flex-grow">
         <ul className="flex flex-col p-4 space-y-2">
           <li>
             <Link 
               to="dashboard" 
-              className="p-2 rounded hover:bg-[#F2C94C] font-semibold flex items-center"
+              className="p-2 rounded hover:bg-[#DD3333] font-semibold flex items-center"
             >
               <FaTachometerAlt className="mr-2"/> Dashboard
             </Link>
@@ -24,23 +24,23 @@ const Navbar = () => {
           <li>
             <Link 
               to="users" 
-              className="p-2 rounded hover:bg-[#F2C94C] font-semibold flex items-center"
+              className="p-2 rounded hover:bg-[#DD3333] font-semibold flex items-center"
             >
-              <FaUsers className="mr-2"/> Users
+              <FaUsers className="mr-2"/> Members
             </Link>
           </li>
           <li>
             <Link 
               to="cutlist" 
-              className="p-2 rounded hover:bg-[#F2C94C] font-semibold flex items-center"
+              className="p-2 rounded hover:bg-[#DD3333] font-semibold flex items-center"
             >
-              <FaList className="mr-2"/> Cutlist
+              <FaList className="mr-2"/> Properties
             </Link>
           </li>
           <li>
             <Link 
               to="credit" 
-              className="p-2 rounded hover:bg-[#F2C94C] font-semibold flex items-center"
+              className="p-2 rounded hover:bg-[#DD3333] font-semibold flex items-center"
             >
               <FaCreditCard className="mr-2"/> Credit
             </Link>
@@ -48,7 +48,7 @@ const Navbar = () => {
           <li>
             <Link 
               to="package" 
-              className="p-2 rounded hover:bg-[#F2C94C] font-semibold flex items-center"
+              className="p-2 rounded hover:bg-[#DD3333] font-semibold flex items-center"
             >
               <FaBox className="mr-2"/> Package
             </Link>
@@ -56,7 +56,7 @@ const Navbar = () => {
           <li>
             <Link 
               to="notification" 
-              className="p-2 rounded hover:bg-[#F2C94C] font-semibold flex items-center"
+              className="p-2 rounded hover:bg-[#DD3333] font-semibold flex items-center"
             >
               <FaBell className="mr-2"/> Notification
             </Link>
@@ -64,7 +64,7 @@ const Navbar = () => {
           <li>
             <Link 
               to="/payments" 
-              className="p-2 rounded hover:bg-[#F2C94C] font-semibold flex items-center"
+              className="p-2 rounded hover:bg-[#DD3333] font-semibold flex items-center"
             >
               <FaMoneyCheckAlt className="mr-2"/> Payments
             </Link>

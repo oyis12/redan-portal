@@ -5,13 +5,13 @@
 
 /* Custom styles for the Menu */
 .custom-menu .ant-menu-item:hover {
-  background-color: #F2C94C !important;
+  background-color: #DD3333 !important;
   color: black !important; /* Ensure text color is readable */
   transition: .8s ease-in-out
 }
 
 .custom-menu .ant-menu-item-selected {
-  background-color: #F2C94C !important;
+  background-color: #DD3333 !important;
   color: black !important; /* Ensure text color is consistent */
   transition: .8s ease-in-out
 }
