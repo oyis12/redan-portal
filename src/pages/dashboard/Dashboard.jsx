@@ -272,19 +272,19 @@ const Dashboard = () => {
     {
       id: 1,
       name: "Rory Mcllroy",
-      dec: "Made Payments for 10 credits",
+      dec: "Owns 10 properties accross the country",
       img: user_1,
     },
     {
       id: 2,
       name: "Manuel Ugate",
-      dec: "Created a new cutlist",
+      dec: "Owns 15 properties accross the countryt",
       img: user_2,
     },
     {
       id: 3,
       name: "Alxis Sanchez",
-      dec: "Complited a cutlist",
+      dec: "Recently Approved as a member",
       img: user_3,
     },
   ];
@@ -537,7 +537,7 @@ const Dashboard = () => {
                         </div>
                         <div>
                           <h1 className="font-semibold">{e.name}</h1>
-                          <p className="text-[.8rem]">{e.dec}</p>
+                          <p className="text-[.7rem]">{e.dec}</p>
                         </div>
                       </div>
                     </div>
