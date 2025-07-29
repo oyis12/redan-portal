@@ -1,7 +1,8 @@
 import React, { createContext, useState, useEffect } from "react";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/logo.png";
+// import logo from "../assets/logo.png";
+import logo from "../assets/images/icons/logo_small.png";
 
 export const Context = createContext();
 
@@ -82,7 +83,7 @@ export const ContextProvider = ({ children }) => {
       <div className="w-full h-screen flex justify-center items-center flex-col">
         <div className="p-4 text-xl font-bold flex items-center">
           <img src={logo} alt="" className="logo animate-fadeIn" />
-          <h2 className="text-[2rem] ml-2 animate-slideIn cutlist">Cutlist</h2>
+          <h2 className="text-[2rem] ml-2 animate-slideIn cutlist">REDAN</h2>
         </div>
         <div className="loader"></div> {/* Loader */}
       </div>
